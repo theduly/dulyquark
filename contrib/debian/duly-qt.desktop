@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Duly
+Comment=Duly P2P Cryptocurrency
+Comment[fr]=Duly, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Duly, eşten eşe kriptografik sanal para birimi
+Exec=duly-qt %u
+Terminal=false
+Type=Application
+Icon=duly128
+MimeType=x-scheme-handler/duly;
+Categories=Office;Finance;

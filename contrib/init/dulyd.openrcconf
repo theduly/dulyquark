@@ -1,0 +1,26 @@
+# /etc/conf.d/dulyd: config file for /etc/init.d/dulyd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/duly/duly.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/dulyd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/dulyd.pid"
+
+# Where to write dulyd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/dulyd"
+
+# User and group to own dulyd process
+#BITCOIND_USER="duly"
+#BITCOIND_GROUP="duly"
+
+# Path to dulyd executable
+#BITCOIND_BIN="/usr/bin/dulyd"
+
+# Nice value to run dulyd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

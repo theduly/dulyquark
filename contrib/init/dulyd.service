@@ -1,0 +1,26 @@
+[Unit]
+Description=DULY's distributed currency daemon
+After=network.target
+
+[Service]
+User=duly
+Group=duly
+
+Type=forking
+PIDFile=/var/lib/dulyd/dulyd.pid
+
+ExecStart=/usr/bin/dulyd -daemon -pid=/var/lib/dulyd/dulyd.pid \
+          -conf=/etc/duly/duly.conf -datadir=/var/lib/dulyd
+
+ExecStop=-/usr/bin/duly-cli -conf=/etc/duly/duly.conf \
+         -datadir=/var/lib/dulyd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
